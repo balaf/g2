@@ -1,0 +1,24 @@
+{
+  "name": "gazette",
+  "author": "Elias Balafoutis <balafi@myopera.com>",
+  "description": "A simple web site - with image gallery",
+  "version": "2.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/ebalaf/g2.git"
+  },
+  "dependencies": {
+    "express": "3.4.2",
+    "jade": "*",
+    "node-gallery": "0.3.1",
+    "express3-handlebars": "0.5.0"
+  },
+  "license": "MIT",
+  "engines": {
+        "node": ">=0.10"
+  }
+}
