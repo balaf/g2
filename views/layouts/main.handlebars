@@ -13,13 +13,54 @@
     <link href="css/bootstrap-custom.css" rel="stylesheet">
     <!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
 
+    <!--- Gallery -->
+    <link rel="stylesheet" href="css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+
 </head>
 <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+                <a class="navbar-brand" href="/">Δέσποινα Τσίγκα Μπούσια</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="/#work">Έργα</a></li>
+                    <li><a href="/#cv">Βιογραφικό</a></li>
+                    <li><a href="/#contact">Επικοινωνία</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
     {{{body}}}
+
+    <div class="section-colored" id="footer">
+    <div class="container">
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Δέσποινα Τσίγκα Μπούσια 2013</p>
+                </div>
+            </div>
+        </footer>
+        </div>
+    </div><!-- /.container -->
     <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/modern-business.js"></script>
+    <script src="js/jquery.blueimp-gallery.min.js"></script>
+    <script src="js/bootstrap-image-gallery.min.js"></script>
 </body>
 </html>

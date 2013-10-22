@@ -1,35 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
-            <a class="navbar-brand" href="/">Δέσποινα Τσίγκα Μπούσια</a>
-        </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="about.html">Έργα</a></li>
-                <li><a href="services.html">Επικοινωνία</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="portfolio-1-col.html">1 Column Portfolio</a></li>
-                        <li><a href="portfolio-2-col.html">2 Column Portfolio</a></li>
-                        <li><a href="portfolio-3-col.html">3 Column Portfolio</a></li>
-                        <li><a href="portfolio-4-col.html">4 Column Portfolio</a></li>
-                        <li><a href="portfolio-item.html">Single Portfolio Item</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
-</nav>
 
 <div id="myCarousel" class="carousel slide">
     <!-- Indicators -->
@@ -43,15 +12,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
-            <div class="fill" style="background-image:url('img/1.jpg');"></div>
+            <div class="fill" style="background-image:url('img/4.jpg');"></div>
             <div class="carousel-caption">
-                <h1>Ο McQueen και η παρέα του</h1>
+                <h1>Η Στρουμφοπαρέα ...</h1>
             </div>
         </div>
         <div class="item">
-            <div class="fill" style="background-image:url('img/2.jpg');"></div>
+            <div class="fill" style="background-image:url('img/1.jpg');"></div>
             <div class="carousel-caption">
-                <h1>Ηρωες του Disney</h1>
+                <h1>Ηρωες του Disney...</h1>
             </div>
         </div>
         <div class="item">
@@ -61,7 +30,7 @@
             </div>
         </div>
         <div class="item">
-            <div class="fill" style="background-image:url('img/4.jpg');"></div>
+            <div class="fill" style="background-image:url('img/2.jpg');"></div>
             <div class="carousel-caption">
                 <h1>Ο Γουίνι και η παρέα του</h1>
             </div>
@@ -83,16 +52,17 @@
 
         <div class="row">
             <div class="col-lg-4 col-md-4">
-                <h3><i class="icon-ok-circle"></i> Bootstrap 3 Built</h3>
-                <p>The 'Modern Business' website template by <a href="http://startbootstrap.com">Start Bootstrap</a> is built with <a href="http://getbootstrap.com">Bootstrap 3</a>. Make sure you're up to date with latest Bootstrap documentation!</p>
+                <p>Επειδή το παραμύθι και η φαντασία δεν είναι μόνο στα βιβλία ...</p>
+
             </div>
             <div class="col-lg-4 col-md-4">
-                <h3><i class="icon-pencil"></i> Ready to Style &amp; Edit</h3>
-                <p>You're ready to go with this pre-built page structure, now all you need to do is add your own custom stylings! You can see some free themes over at <a href="http://bootswatch.com">Bootswatch</a>, or come up with your own using <a href="http://getbootstrap.com/customize/">the Bootstrap customizer</a>!</p>
+                <p>Μεγαλώστε και ομορφύνετε το χώρο που ζείτε και εργάζεστε με σχέδια της αρεσκείας σας ζωγραφισμένα με το χέρι απ'αυθείας στον τοίχο.</p>
             </div>
             <div class="col-lg-4 col-md-4">
-                <h3><i class="icon-folder-open-alt"></i> Many Page Options</h3>
-                <p>This template features many common pages that you might see on a business website. Pages include: about, contact, portfolio variations, blog, pricing, FAQ, 404, services, and general multi-purpose pages.</p>
+                <!--<h3><i class="icon-folder-open-alt"></i> Many Page Options</h3>-->
+                <p>...ιστορίες που αγαπάμε</p>
+                <p>...σκηνές που δεν συναντoύμε εύκολα στην καθημερινότητά</p>
+                <p>...μοναδικά στιγμιότυπα από τη ζωή</p>
             </div>
         </div><!-- /.row -->
 
@@ -100,7 +70,7 @@
 
 </div><!-- /.section -->
 
-<div class="section-colored">
+<div class="section-colored" id="work">
 
     <div class="container">
 
@@ -109,9 +79,9 @@
                 <h2>Έργα</h2>
             </div>
             {{#each albums}}
-                <div class="col-lg-2 col-md-2 col-sm-3">
+                <div class="col-lg-2 col-md-2 col-sm-2">
 
-                    <a href="portfolio-item.html"><img class="img-responsive img-polaroid img-home-portfolio" src="photos/{{this.thumb}}" style="width: 180px; height: 135px;"></a>
+                    <a href="{{this.name}}"><img class="img-responsive img-polaroid img-home-portfolio" src="photos/{{this.thumb}}" style="width: 180px; height: 135px;"></a>
                 </div>
             {{/each}}
         </div>
@@ -120,13 +90,50 @@
 
 </div><!-- /.section -->
 
-<div class="container">
-    <footer>
+<div class="section" id="cv">
+
+    <div class="container">
+
         <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Δέσποινα Τσίγκα Μπούσια 2013</p>
+            <div class="col-lg-6 col-lg-offset-3 text-center">
+                <h2> Βιογραφικό</h2>
             </div>
         </div>
-    </footer>
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 text-left">
+            <p class="vio"> <img src="img/vio.jpg" alt="Εικόνα" class="img-thumbnail"> Η Δέσποινα, γεννήθηκε και μεγάλωσε στο Αγρίνιο. Στα 18 της χρόνια ξεκίνησε ελεύθερες σπουδές στην Αθήνα, όπου σπούδασε διακόσμηση, και συνέχισε στα Χανιά, όπου φοίτησε στη σχολή κεραμικής της Ιεράς Μητρόπολης Κισσάμου. Το 1994 μαθήτευσε επί ένα έτος στη σχολή αγιογραφίας της Χριστιανικής Ενώσεως Νεανίδων και στην συνέχεια στη σχολή του Σπυρίδωνα Καρδαμάκη όπου ειδικεύτηκε στη φορητή εικόνα και την τοιχογραφία.
+               Με την Βυζαντινή Αγιογραφία καθώς και τη διδασκαλία Αγιογραφίας ασχολείται επαγγελματικά μέχρι και σήμερα. (Πληροφορίες: <a href="http://bousias.gazette.gr" target="_blank">http://bousias.gazette.gr</a>) </p>
+            <p> Η ενασχόληση της με την τοιχογραφία ποικίλης θεματολογίας ξεκίνησε από την εποχή των σπουδών αγιογραφίας, ενώ τα τελευταία χρόνια οι τοιχογραφίες και η διακοσμήση παιδικών δωματίων, οικιών και επαγγελμάτικών χώρων αποτελούν αντικείμενο επαγγελματικής ενασχόλησης με αξιοσημείωτη επιτυχία.</p>
+            <p> Είναι μέλος του Καλλιτεχνικού Επιμελητηρίου Ελλάδος</p>
+            </div>
+        </div>
 
-</div><!-- /.container -->
+    </div><!-- /.container -->
+
+</div><!-- /.section -->
+
+
+<div class="section section-green" id="contact">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-left">
+                <h2>Επικοινωνία</h2>
+                <p> Δωρεάν και χωρίς καμία υποχρέωση, συνεργάτης μας επισκέπτεται το χώρο σας για να ακούσει τις ιδέες σας, να σας βοηθήσει να βρείτε μαζί τα σχέδια που ταιριάζουν στο σπίτι σας ή τον επαγγελματικό σας χώρο και να σας προτείνει λύσεις που απαντούν στις επιθυμίες σας μέσα στο πλαίσιο του χρηματικού ποσού που εσείς θέλετε να διαθέσετε.
+                    Πλέον του νομού Αττικής, έργα αναλαμβάνονται σε όλη την Ελλάδα κατόπιν τηλεφωνικής επικοινωνίας,
+
+                    <div class="bs-example">
+                    Στοιχεία Επικοινωνίας:
+                    Δέσποινα Τσίγκα Μπούσια
+                    Τηλ:210-7753277
+                    Κιν:6972-495807
+                    e-mail: bousias@yahoo.com
+                    </div>
+            </div>
+
+        </div>
+
+    </div><!-- /.container -->
+
+</div><!-- /.section -->

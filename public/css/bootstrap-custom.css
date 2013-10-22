@@ -7,8 +7,34 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     padding: 5px;
+    boarder-radius:10px;
 }
 
 .section-colored {
+    box-shadow: inset 1px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
     background-color: #D9D4CB;
+
+}
+
+.section-green {
+    background-color: #D0E9C6;
+}
+
+.img-thumbnail {
+    margin-right: 5px;
+    float:left;
+}
+
+.navbar-brand {
+    color: #800080;
+    margin-right: 30px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.vio {
+    text-align: justify;
 }
