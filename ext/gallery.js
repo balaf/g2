@@ -392,43 +392,76 @@ var gallery = {
       image = false;
 
 
-
-      var staticTest = /\.png|\.jpg|\.css|\.js/i;
-      if (rootURL=="" || url.indexOf(rootURL)===-1 /*|| staticTest.test(url)*/){
-
-//     This isn't working just quite yet, let's skip over it
         var thumbTest =  /[a-zA-Z0-9].*(\.png|\.jpg)&tn=1/i;
+
         if (thumbTest.test(url)){
-          url = req.url = url.replace("&tn=1", "");
-          var imagePath = me.static + decodeURI(url);
-          if (me.imageCache[imagePath]){
-            res.contentType('image/jpg');
-            res.end(me.imageCache[imagePath], 'binary');
-          }else{
-            fs.readFile(imagePath, 'binary', function(err, file){
-              if (err){
-                console.log(err);
-                return res.send(err);
-              }
-              im.resize({
-                srcData: file,
-                width:   256
-              }, function(err, binary, stderr){
-                if (err){
-                  util.inspect(err);
-                  res.send('error generating thumb');
-                }
+            url = req.url = url.replace("&tn=1", "");
+            var imagePath = me.static + decodeURI(url);
+            if (me.imageCache[imagePath]){
                 res.contentType('image/jpg');
-                res.end(binary, 'binary');
-                me.imageCache[imagePath] = binary;
-              });
-            });
-          }
-          return;
+                res.end(me.imageCache[imagePath], 'binary');
+            }else{
+                fs.readFile(imagePath, 'binary', function(err, file){
+                    if (err){
+                        console.log(err);
+                        return res.send(err);
+                    }
+
+                    im.resize({
+                        srcData: file,
+                        width:   256,
+                        height:  256
+                    }, function(err, binary, stderr){
+                        if (err){
+                            util.inspect(err);
+                            res.send('error generating thumb');
+                        }
+                        res.contentType('image/jpg');
+                        res.end(binary, 'binary');
+                        me.imageCache[imagePath] = binary;
+                    });
+                });
+            }
+            return;
         }
-        // Not the right URL. We have no business here. Onwards!
-        return next();
-      }
+
+
+        if (rootURL=="" || url.indexOf(rootURL)===-1 /*|| staticTest.test(url)*/){
+            console.log("Test1:", thumbTest)
+//     This isn't working just quite yet, let's skip over it
+            var thumbTest =  /[a-zA-Z0-9].*(\.png|\.jpg)&tn=1/i;
+            console.log("Test2:", thumbTest)
+            if (thumbTest.test(url)){
+                url = req.url = url.replace("&tn=1", "");
+                var imagePath = me.static + decodeURI(url);
+                if (me.imageCache[imagePath]){
+                    res.contentType('image/jpg');
+                    res.end(me.imageCache[imagePath], 'binary');
+                }else{
+                    fs.readFile(imagePath, 'binary', function(err, file){
+                        if (err){
+                            console.log(err);
+                            return res.send(err);
+                        }
+                        im.resize({
+                            srcData: file,
+                            width:   256
+                        }, function(err, binary, stderr){
+                            if (err){
+                                util.inspect(err);
+                                res.send('error generating thumb');
+                            }
+                            res.contentType('image/jpg');
+                            res.end(binary, 'binary');
+                            me.imageCache[imagePath] = binary;
+                        });
+                    });
+                }
+                return;
+            }
+            // Not the right URL. We have no business here. Onwards!
+            return next();
+        }
 
       url = url.replace(rootURL, "");
       // Do some URL massaging - wouldn't have to do this if .params were accessible?
