@@ -2,8 +2,7 @@ var fs = require('fs'),
 exif = require('./exif.js'),
 walk = require('walk'),
 util = require('util'),
-path = require('path'),
-im = require('imagemagick');
+path = require('path')
 
 var gallery = {
   /*
@@ -44,10 +43,7 @@ var gallery = {
    * Filter string to use for excluding filenames. Defaults to a regular expression that excludes dotfiles.
    */
   filter: /^Thumbs.db|^\.[a-zA-Z0-9]+/,
-  /*
-   * Object used to store binary chunks that represent image thumbs
-   */
-  imageCache: {},
+
   /*
    * Private function to walk a directory and return an array of files
    */
@@ -387,81 +383,8 @@ var gallery = {
     return function(req, res, next){
       var url = req.url,
       rootURL = gallery.rootURL,
-      params = req.params,
       requestParams = {},
       image = false;
-
-
-        var thumbTest =  /[a-zA-Z0-9].*(\.png|\.jpg)&tn=1/i;
-
-        if (thumbTest.test(url)){
-            url = req.url = url.replace("&tn=1", "");
-            var imagePath = me.static + decodeURI(url);
-            if (me.imageCache[imagePath]){
-                res.contentType('image/jpg');
-                res.end(me.imageCache[imagePath], 'binary');
-            }else{
-                fs.readFile(imagePath, 'binary', function(err, file){
-                    if (err){
-                        console.log(err);
-                        return res.send(err);
-                    }
-
-                    im.resize({
-                        srcData: file,
-                        width:   256,
-                        height:  256
-                    }, function(err, binary, stderr){
-                        if (err){
-                            util.inspect(err);
-                            res.send('error generating thumb');
-                        }
-                        res.contentType('image/jpg');
-                        res.end(binary, 'binary');
-                        me.imageCache[imagePath] = binary;
-                    });
-                });
-            }
-            return;
-        }
-
-
-        if (rootURL=="" || url.indexOf(rootURL)===-1 /*|| staticTest.test(url)*/){
-            console.log("Test1:", thumbTest)
-//     This isn't working just quite yet, let's skip over it
-            var thumbTest =  /[a-zA-Z0-9].*(\.png|\.jpg)&tn=1/i;
-            console.log("Test2:", thumbTest)
-            if (thumbTest.test(url)){
-                url = req.url = url.replace("&tn=1", "");
-                var imagePath = me.static + decodeURI(url);
-                if (me.imageCache[imagePath]){
-                    res.contentType('image/jpg');
-                    res.end(me.imageCache[imagePath], 'binary');
-                }else{
-                    fs.readFile(imagePath, 'binary', function(err, file){
-                        if (err){
-                            console.log(err);
-                            return res.send(err);
-                        }
-                        im.resize({
-                            srcData: file,
-                            width:   256
-                        }, function(err, binary, stderr){
-                            if (err){
-                                util.inspect(err);
-                                res.send('error generating thumb');
-                            }
-                            res.contentType('image/jpg');
-                            res.end(binary, 'binary');
-                            me.imageCache[imagePath] = binary;
-                        });
-                    });
-                }
-                return;
-            }
-            // Not the right URL. We have no business here. Onwards!
-            return next();
-        }
 
       url = url.replace(rootURL, "");
       // Do some URL massaging - wouldn't have to do this if .params were accessible?

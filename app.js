@@ -5,6 +5,8 @@ var http = require('http');
 var path = require('path');
 var exphbs  = require('express3-handlebars');
 var gallery = require('./ext/gallery');
+var qt = require('quickthumb');
+var rt = require('./ext/rapidThumb');
 
 var app = express();
 
@@ -17,7 +19,10 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
+app.use(rt.init(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 app.use(gallery.middleware({static: 'public', directory: '/photos', rootURL: "/"}));
 app.use(app.router);
 

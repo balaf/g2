@@ -1,5 +1,5 @@
 .carousel {
-    height: 70%;
+    height: 80%;
 }
 
 .img-polaroid {
@@ -20,7 +20,7 @@
 }
 
 .img-thumbnail {
-    margin-right: 5px;
+    margin-right: 15px;
     float:left;
 }
 
@@ -36,4 +36,9 @@ h1, h2, h3 {
 
 .vio {
     text-align: justify;
+}
+
+.blueimp-gallery > .indicator > li {
+    height: 40px;
+    width: 50px;
 }

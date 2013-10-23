@@ -1,39 +1,25 @@
 
 
 <div id="myCarousel" class="carousel slide">
-    <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li class="" data-slide-to="0" data-target="#myCarousel"></li>
+        <li data-slide-to="1" data-target="#myCarousel"></li>
+        <li data-slide-to="2" data-target="#myCarousel"></li>
+        <li data-slide-to="3" data-target="#myCarousel"></li>
     </ol>
-
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
         <div class="item active">
-            <div class="fill" style="background-image:url('img/4.jpg');"></div>
-            <div class="carousel-caption">
-                <h1>Η Στρουμφοπαρέα ...</h1>
-            </div>
-        </div>
-        <div class="item">
             <div class="fill" style="background-image:url('img/1.jpg');"></div>
-            <div class="carousel-caption">
-                <h1>Ηρωες του Disney...</h1>
-            </div>
-        </div>
-        <div class="item">
-            <div class="fill" style="background-image:url('img/3.jpg');"></div>
-            <div class="carousel-caption">
-                <h1>Αγαπημένα παραμύθια</h1>
-            </div>
         </div>
         <div class="item">
             <div class="fill" style="background-image:url('img/2.jpg');"></div>
-            <div class="carousel-caption">
-                <h1>Ο Γουίνι και η παρέα του</h1>
-            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('img/3.jpg');"></div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('img/4.jpg');"></div>
         </div>
     </div>
 
@@ -79,9 +65,9 @@
                 <h2>Έργα</h2>
             </div>
             {{#each albums}}
-                <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="col-lg-2 col-md-4 col-sm-6">
 
-                    <a href="{{this.name}}"><img class="img-responsive img-polaroid img-home-portfolio" src="photos/{{this.thumb}}" style="width: 180px; height: 135px;"></a>
+                    <a href="{{this.name}}"><img class="img-responsive img-polaroid img-home-portfolio" src="photos/{{this.thumb}}?tn=180"></a>
                 </div>
             {{/each}}
         </div>
@@ -95,16 +81,17 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-6 col-lg-offset-3 text-center">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-lg-offset-2 col-sm-12 text-center">
                 <h2> Βιογραφικό</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-lg-offset-3 text-left">
-            <p class="vio"> <img src="img/vio.jpg" alt="Εικόνα" class="img-thumbnail"> Η Δέσποινα, γεννήθηκε και μεγάλωσε στο Αγρίνιο. Στα 18 της χρόνια ξεκίνησε ελεύθερες σπουδές στην Αθήνα, όπου σπούδασε διακόσμηση, και συνέχισε στα Χανιά, όπου φοίτησε στη σχολή κεραμικής της Ιεράς Μητρόπολης Κισσάμου. Το 1994 μαθήτευσε επί ένα έτος στη σχολή αγιογραφίας της Χριστιανικής Ενώσεως Νεανίδων και στην συνέχεια στη σχολή του Σπυρίδωνα Καρδαμάκη όπου ειδικεύτηκε στη φορητή εικόνα και την τοιχογραφία.
-               Με την Βυζαντινή Αγιογραφία καθώς και τη διδασκαλία Αγιογραφίας ασχολείται επαγγελματικά μέχρι και σήμερα. (Πληροφορίες: <a href="http://bousias.gazette.gr" target="_blank">http://bousias.gazette.gr</a>) </p>
-            <p> Η ενασχόληση της με την τοιχογραφία ποικίλης θεματολογίας ξεκίνησε από την εποχή των σπουδών αγιογραφίας, ενώ τα τελευταία χρόνια οι τοιχογραφίες και η διακοσμήση παιδικών δωματίων, οικιών και επαγγελμάτικών χώρων αποτελούν αντικείμενο επαγγελματικής ενασχόλησης με αξιοσημείωτη επιτυχία.</p>
-            <p> Είναι μέλος του Καλλιτεχνικού Επιμελητηρίου Ελλάδος</p>
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-12 text-left">
+            <p class="vio"> <img src="img/vio.jpg" alt="Εικόνα" class="img-thumbnail"> Η Δέσποινα, γεννήθηκε και μεγάλωσε στο Αγρίνιο. Στα 18 της χρόνια ξεκίνησε ελεύθερες σπουδές στην Αθήνα, όπου σπούδασε διακόσμηση, και συνέχισε στα Χανιά, όπου φοίτησε στη σχολή κεραμικής της Ιεράς Μητρόπολης Κισσάμου. </p>
+            <p class="vio"> Το 1994 μαθήτευσε επί ένα έτος στη σχολή αγιογραφίας της Χριστιανικής Ενώσεως Νεανίδων και στην συνέχεια στη σχολή του Σπυρίδωνα Καρδαμάκη όπου ειδικεύτηκε στη φορητή εικόνα και την τοιχογραφία.
+            Με την Βυζαντινή Αγιογραφία καθώς και τη διδασκαλία Αγιογραφίας ασχολείται επαγγελματικά μέχρι και σήμερα. (Πληροφορίες: <a href="http://bousias.gazette.gr" target="_blank">http://bousias.gazette.gr</a>) </p>
+                <p class="vio"> Η ενασχόληση της με την τοιχογραφία ποικίλης θεματολογίας ξεκίνησε από την εποχή των σπουδών αγιογραφίας, ενώ τα τελευταία χρόνια οι τοιχογραφίες και η διακοσμήση παιδικών δωματίων, οικιών και επαγγελμάτικών χώρων αποτελούν αντικείμενο επαγγελματικής ενασχόλησης με αξιοσημείωτη επιτυχία.</p>
+            <p class="vio"> Είναι μέλος του Καλλιτεχνικού Επιμελητηρίου Ελλάδος</p>
             </div>
         </div>
 
@@ -118,7 +105,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-left">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 text-left">
                 <h2>Επικοινωνία</h2>
                 <p> Δωρεάν και χωρίς καμία υποχρέωση, συνεργάτης μας επισκέπτεται το χώρο σας για να ακούσει τις ιδέες σας, να σας βοηθήσει να βρείτε μαζί τα σχέδια που ταιριάζουν στο σπίτι σας ή τον επαγγελματικό σας χώρο και να σας προτείνει λύσεις που απαντούν στις επιθυμίες σας μέσα στο πλαίσιο του χρηματικού ποσού που εσείς θέλετε να διαθέσετε.
                     Πλέον του νομού Αττικής, έργα αναλαμβάνονται σε όλη την Ελλάδα κατόπιν τηλεφωνικής επικοινωνίας,
