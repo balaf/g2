@@ -5,7 +5,6 @@ var http = require('http');
 var path = require('path');
 var exphbs  = require('express3-handlebars');
 var gallery = require('./ext/gallery');
-var qt = require('quickthumb');
 var rt = require('./ext/rapidThumb');
 
 var app = express();
