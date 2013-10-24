@@ -28,7 +28,6 @@ var rt = {
             var dims = dim.split(/x/g)
 
             if (me.imageCache[orig]){
-                console.log("HIT");
                 res.contentType('image/jpg');
                 res.end(me.imageCache[orig], 'binary');
             } else {
