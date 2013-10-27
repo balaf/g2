@@ -17,33 +17,36 @@
 
 
 .section-colored {
-    box-shadow: inset 1px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
     background-color: #D9D4CB;
 }
 
 .section-carousel {
-    background-color: #DED4B9;
+    background-color:  #DED4B9;
     color: #CE534D;
 }
 
 .section-work {
-    box-shadow: inset 1px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
     background-color: #CE534D;
     color: #DED4B9;
 }
 
 .section-cv {
     background-color: #DED4B9;;
+    box-shadow: inset 0px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
     color: #46433A;
 
 }
 
 .section-contact {
+    box-shadow: inset 0px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
     background-color: #64B6B1;
     color: #46433A;
 }
 
 .section-footer {
+    box-shadow: inset 0px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
     background-color: #46433A;;
     color: #DED4B9;
 }
@@ -56,7 +59,7 @@ section-work-detail {
 
 
 .img-thumbnail {
-    margin-right: 15px;
+    margin-right: 5px;
     float:left;
 }
 
@@ -81,6 +84,9 @@ h1, h2, h3 {
 
 .contact li{
     list-style-type: none;
-    font-weight:bold;
 }
 
+
+.strong {
+    font-weight: bold;
+}
