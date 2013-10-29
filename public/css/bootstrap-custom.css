@@ -51,10 +51,30 @@
     color: #DED4B9;
 }
 
-section-work-detail {
+.section-ribbon {
     background-color: #CE534D;
-    color: #f5f5f5;
+    height: 150px;
 }
+
+.first {
+    background-color: #64B6B1;
+    box-shadow: inset 4px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
+
+    height: 150px;
+}
+.third {
+    background-color: #DED4B9;
+    height: 150px;
+    box-shadow: inset 4px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
+}
+.forth {
+    background-color: #CE534D;
+    height: 150px;
+    box-shadow: inset 4px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
+}
+
+
+
 
 
 
@@ -83,10 +103,11 @@ h1, h2, h3 {
 }
 
 .contact li{
+    font-weight: bold;
     list-style-type: none;
 }
 
 
 .strong {
-    font-weight: bold;
+
 }
