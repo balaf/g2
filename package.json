@@ -17,7 +17,7 @@
     "walk": "*",
     "exif": "git://github.com/cianclarke/node-exif.git",
     "imagemagick" : "*",
-    "thumb-express" : "0.0.1"
+    "thumb-express" : "0.0.2"
   },
   "license": "MIT",
   "engines": {

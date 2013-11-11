@@ -22,8 +22,8 @@
 }
 
 .section-carousel {
-    background-color:  #DED4B9;
-    color: #CE534D;
+    background-color:#CE534D;
+    color: #DED4B9;
 }
 
 .section-work {
@@ -73,6 +73,9 @@
     box-shadow: inset 4px 4px 9px -6px;  rgba(0, 0, 0, 0.3);
 }
 
+.dropdown-menu > li > a:hover{
+    background-color:#CE534D;
+}
 
 
 

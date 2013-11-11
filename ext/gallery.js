@@ -161,6 +161,8 @@ var gallery = {
         }
         curAlbum.description = info.description || null;
         curAlbum.prettyName = info.name || curAlbum.prettyName;
+        curAlbum.id = info.id || "";
+        curAlbum.style = info.style || "";
 
         if (info.thumb || info.thumbnail){
           var thumbnailImage = info.thumb || info.thumbnail;

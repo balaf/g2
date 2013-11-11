@@ -38,12 +38,17 @@
                 <div id="links">
                     {{#each album.photos}}
                     <div class="col-lg-2 col-md-4 col-sm-6">
-                        <a href="photos/{{this.path}}" data-gallery>
-                            <img  class="img-responsive img-polaroid img-home-portfolio" src="photos/{{this.path}}?tn=140">
+                        <a href="/photos/{{this.path}}" data-gallery>
+                           <img  class="img-responsive img-polaroid img-home-portfolio" src="/photos/{{this.path}}?tn=140">
                         </a>
                     </div>
                     {{/each}}
                 </div>
             </div>
+           <div class="row">
+                   <div class="col-lg-2 col-md-4 col-sm-6">
+                       {{description}}
+                  </div>
+           </div>
         </div>
     </div>
