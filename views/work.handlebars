@@ -1,4 +1,5 @@
 <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+
 <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
     <!-- The container for the modal slides -->
     <div class="slides"></div>
@@ -38,7 +39,7 @@
                 <div id="links">
                     {{#each album.photos}}
                     <div class="col-lg-2 col-md-4 col-sm-6">
-                        <a href="/photos/{{this.path}}" data-gallery>
+                        <a href="/photos/{{this.path}}" data-gallery="#blueimp-gallery">
                            <img  class="img-responsive img-polaroid img-home-portfolio" src="/photos/{{this.path}}?tn=140">
                         </a>
                     </div>
