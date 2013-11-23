@@ -31,7 +31,6 @@
     // in the Gallery lightbox:
     $(document).on('click', '[data-gallery]', function (event) {
         // Get the container id from the data-gallery attribute:
-        console.log("THIS:", this)
         var id = $(this).data('gallery'),
             widget = $(id),
             container = (widget.length && widget) ||

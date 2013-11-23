@@ -57,7 +57,6 @@
                 thumbnailUrl,
                 thumbnail*/;
             if (this.options.thumbnailIndicators) {
-                console.log("OBJ:", obj.href)
             /*    thumbnail = obj.getElementsByTagName && $(obj).find('img')[0];
                 if (thumbnail) {
                     thumbnailUrl = thumbnail.src;
@@ -66,7 +65,6 @@
                 }*/
                 if (obj.href) {
                     indicator.style.backgroundImage = 'url("' + obj.href + '?tn=100")';
-                    console.log("Set:", indicator.style.backgroundImage )
                 }
             }
             if (title) {
